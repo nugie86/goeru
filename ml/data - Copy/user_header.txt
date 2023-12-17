@@ -1,1 +1,0 @@
-user_id,age,Mathematics,Physics,Biology,Chemistry,Economy,Sosiology,Geography,History,Antropology

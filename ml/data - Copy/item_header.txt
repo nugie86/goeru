@@ -1,1 +1,0 @@
-teacher_id,ave_ratings,Mathematics,Physics,Biology,Chemistry,Economy,Sosiology,Geography,History,Antropology
