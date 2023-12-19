@@ -1,0 +1,36 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/filter_subject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Mata pelajaran"/>
+
+    <EditText
+        android:id="@+id/filter_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nama guru"/>
+
+    <EditText
+        android:id="@+id/filter_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Address"/>
+
+    <Button
+        android:id="@+id/btn_apply_filter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Apply Filter"/>
+
+    <Button
+        android:id="@+id/btn_reset_filter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset Filter"/>
+</LinearLayout>

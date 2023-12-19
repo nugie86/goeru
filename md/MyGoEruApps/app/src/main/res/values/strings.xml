@@ -1,0 +1,136 @@
+<resources>
+    <string name="app_name">GoEru</string>
+
+    <string name="started_title">Hello!</string>
+    <string name="started_sub_title">
+        Nice to meet you, come join our community!
+        <br><b>Login</b> if you already have an account.</br>
+        <br><b>Register</b> to get started with the app.</br>
+    </string>
+    <string name="ilustration_img">Ilustration Image</string>
+    <string name="btn_register">Register</string>
+    <string name="login_title">Login to app</string>
+
+    <string name="login_sub_title">
+        <font color="#00C9B8"><b>Login</b></font>
+        if you already have an account.
+    </string>
+
+    <string name="register_sub_title">
+        <font color="#00C9B8"><b>Register</b></font>
+        to get started with the app.
+    </string>
+
+    <string name="login_email">Your email</string>
+    <string name="login_forgot_pw">Forgot Password?</string>
+
+    <string name="login_havent_account">
+        I don\'t have an account
+        <font color="#00C9B8"><b>Register</b></font>
+    </string>
+
+    <string name="back_to_login">
+        Back to
+        <font color="#00C9B8"><b>Login</b></font>
+    </string>
+    <string name="btn_login">Login</string>
+    <string name="register_title">Create an account</string>
+    <string name="register_fullname">Your full name</string>
+    <string name="register_email">Your email</string>
+    <string name="register_username">Your username</string>
+    <string name="register_password">Your password</string>
+    <string name="register_confirm_password">Confirm your password</string>
+    <string name="register_have_account">
+        I already have an account
+        <font color="#00C9B8"><b>Login</b></font>
+    </string>
+    <string name="home_sub_title">Welcome to Home</string>
+    <string name="btn_logout">LOGOUT</string>
+    <string name="reset_pw_title">Reset your password</string>
+
+    <string name="reset_pw_sub_title">
+        <font color="#00C9B8">Reset password</font>
+        if you forgot your password.
+    </string>
+    <string name="btn_reset_pw">Reset password</string>
+    <string name="login_as">You are logged in as</string>
+    <string name="item_label">Items</string>
+    <string name="register_as">You are registering as:</string>
+    <string name="login_password">Your password</string>
+    <string name="teacher_title">Update your profile</string>
+    <string name="teacher_sub_title">
+        <font color="#00C9B8">Update</font>
+        your attributes</string>
+    <string name="teacher_address">Your address</string>
+    <string name="update_subject">Subject</string>
+    <string name="update_age">Age</string>
+    <string name="detail_title">Teacher profile</string>
+
+    <string-array name="usertype">
+        <item>STUDENT</item>
+        <item>TEACHER</item>
+    </string-array>
+
+    <string name="sample_name">
+        <font color="#00C9B8">Full name: </font>
+        Daniela Villarreal
+    </string>
+
+    <string name="sample_subject">
+        <font color="#00C9B8">Subject: </font>
+        Seni Budaya
+    </string>
+
+    <string name="sample_address">
+        <font color="#00C9B8">Address: </font>
+        Yogyakarta
+    </string>
+
+    <string name="sample_age">
+        <font color="#00C9B8">Age: </font>
+        23
+    </string>
+
+    <string name="sample_price">
+        <font color="#00C9B8">Price: </font>
+        50.000
+    </string>
+
+    <string name="name">
+        <font color="#00C9B8">Name: </font>
+        %s
+    </string>
+
+    <string name="subject">
+        <font color="#00C9B8">Subject: </font>
+        %s
+    </string>
+
+    <string name="price">
+        <font color="#00C9B8">Price: </font>
+        %s
+    </string>
+
+    <string name="address">
+        <font color="#00C9B8">Address: </font>
+        %s
+    </string>
+
+    <string name="age">
+        <font color="#00C9B8">Age: </font>
+        %d
+    </string>
+    <string name="btn_update">POST</string>
+    <string name="btn_filter">FILTER</string>
+
+    <string name="failed_register">Failed to register</string>
+    <string name="camera">Camera</string>
+    <string name="gallery">Gallery</string>
+    <string name="description_hint">Description</string>
+    <string name="upload">Post</string>
+    <string name="empty_image">Image shouldn\'t be empty</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_home_fragment">Age Fragment</string>
+
+</resources>

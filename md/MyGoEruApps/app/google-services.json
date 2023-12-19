@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "742877916662",
+    "project_id": "mygoeruapps",
+    "storage_bucket": "mygoeruapps.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:742877916662:android:893d9aa014eca370956bd7",
+        "android_client_info": {
+          "package_name": "com.tegas.mygoeruapps"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBi-67gF0vt7lGIHptLA6yNwMBObWmcfVs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

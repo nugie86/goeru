@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.preference.PreferenceActivity">
+
+    <TextView
+        android:id="@+id/tv_age"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:gravity="center_horizontal"
+        android:textSize="35sp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="What are your favorite subjects?"
+        style="@style/Title"
+        android:textStyle="bold"
+        android:textColor="@color/primary_color"/>
+
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_age"
+        android:layout_margin="18dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <RadioButton
+            android:id="@+id/radioBtn1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@drawable/radio_selector1"
+            android:checked="false"
+            android:text="Math"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="@color/radio_text_color"/>
+
+        <RadioButton
+            android:id="@+id/radioBtn2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@drawable/radio_selector1"
+            android:checked="false"
+            android:text="Physics"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="@color/radio_text_color"
+            android:layout_marginTop="8dp"/>
+
+        <RadioButton
+            android:id="@+id/radioBtn3"
+            android:layout_marginTop="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@drawable/radio_selector1"
+            android:checked="false"
+            android:text="Chemistry"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="@color/radio_text_color"/>
+
+        <RadioButton
+            android:id="@+id/radioBtn4"
+            android:layout_marginTop="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@drawable/radio_selector1"
+            android:checked="false"
+            android:text="Economy"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="@color/radio_text_color"/>
+
+        <RadioButton
+            android:id="@+id/radioBtn5"
+            android:layout_marginTop="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@drawable/radio_selector1"
+            android:checked="false"
+            android:text="Biology"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="@color/radio_text_color"/>
+
+        <RadioButton
+            android:id="@+id/radioBtn6"
+            android:layout_marginTop="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@drawable/radio_selector1"
+            android:checked="false"
+            android:text="Sosiology"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="@color/radio_text_color"/>
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/next_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/radio_group"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="46dp"
+        android:text="NEXT"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
