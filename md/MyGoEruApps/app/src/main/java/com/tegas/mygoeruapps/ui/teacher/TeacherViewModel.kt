@@ -1,6 +1,7 @@
 package com.tegas.mygoeruapps.ui.teacher
 
 import android.content.ContentValues
+import android.provider.MediaStore.Audio.Media
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MediatorLiveData
@@ -11,6 +12,7 @@ import androidx.lifecycle.viewModelScope
 import com.tegas.mygoeruapps.data.Result
 import com.tegas.mygoeruapps.data.UserModel
 import com.tegas.mygoeruapps.data.UserRepository
+import com.tegas.mygoeruapps.data.response.DescriptionResponse
 import com.tegas.mygoeruapps.data.response.DetailResponse
 import com.tegas.mygoeruapps.data.response.UploadResponse
 import com.tegas.mygoeruapps.data.retrofit.ApiConfig
@@ -21,10 +23,13 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class TeacherViewModel(private val repository: UserRepository): ViewModel() {
+class TeacherViewModel(private val repository: UserRepository) : ViewModel() {
 
     private val _postResponse = MediatorLiveData<Result<UploadResponse>>()
     val postResponse: LiveData<Result<UploadResponse>> = _postResponse
+
+    private val _descriptionResponse = MediatorLiveData<Result<DescriptionResponse>>()
+    val descriptionResponse: LiveData<Result<DescriptionResponse>> = _descriptionResponse
 
     fun getSession(): LiveData<UserModel> {
         return repository.getSession().asLiveData()
@@ -37,6 +42,16 @@ class TeacherViewModel(private val repository: UserRepository): ViewModel() {
         val liveData = repository.uploadImage(token, file)
         _postResponse.addSource(liveData) { result ->
             _postResponse.value = result
+        }
+    }
+
+    fun postDescription(
+        token: String,
+        deskripsi: String
+    ) {
+        val liveData = repository.postDescription(token, deskripsi)
+        _descriptionResponse.addSource(liveData) { result ->
+            _descriptionResponse.value = result
         }
     }
 

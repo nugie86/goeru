@@ -10,8 +10,6 @@ data class DetailResponse(
 	@field:SerializedName("guru")
 	val guru: Guru,
 
-	@field:SerializedName("rating")
-	val rating: Rating,
 )
 
 @Entity(tableName = "detail")
@@ -46,11 +44,14 @@ data class Guru(
 	@field:SerializedName("deskripsi")
 	val deskripsi: String,
 
+	@field:SerializedName("rating")
+	val rating: List<Rating>,
+
 )
 data class Rating(
 
 	@field:SerializedName("nilai")
-	val nilai: Any,
+	val nilai: Double?,
 
 	@field:SerializedName("komentar")
 	val komentar: String,

@@ -29,7 +29,6 @@ class DetailActivity : AppCompatActivity() {
     }
 
     private lateinit var teacher: Guru
-    private var rating: Rating? = null
     private var teacherId: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -57,7 +56,6 @@ class DetailActivity : AppCompatActivity() {
 
         viewModel.teacherDetail.observe(this) { detailResponse ->
             teacher = detailResponse.guru
-            rating = detailResponse.rating
 
             if (teacher.gambar.isEmpty()) {
                 Glide
@@ -81,9 +79,7 @@ class DetailActivity : AppCompatActivity() {
             binding.tvSubject.text = getString(R.string.subject, teacher.mapel)
             binding.tvPrice.text = getString(R.string.price, teacher.harga.toString())
             binding.description.text = teacher.deskripsi
-            binding.tvRating.text = rating?.nilai.toString()
 
-            Log.d("rating", "rating: ${rating?.nilai}")
         }
 
         binding.btnFav.setBackgroundColor(resources.getColor(R.color.primary_color, null))
@@ -102,6 +98,7 @@ class DetailActivity : AppCompatActivity() {
         }
 
         binding.btnOrder.setBackgroundColor(resources.getColor(R.color.primary_color, null))
+
         binding.btnOrder.setOnClickListener {
             val intent = Intent(this, OrderActivity::class.java)
             intent.putExtra("price", teacherItem?.harga)

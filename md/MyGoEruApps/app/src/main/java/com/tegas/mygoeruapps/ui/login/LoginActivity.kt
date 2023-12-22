@@ -115,9 +115,9 @@ class LoginActivity : AppCompatActivity() {
                     val role = it.data.role
                     val id = it.data.userId
                     AlertDialog.Builder(this).apply {
-                        setTitle("Alright!")
+                        setTitle("Selamat!")
                         setMessage("Login Success!")
-                        setPositiveButton("Go to Main Page") { _, _ ->
+                        setPositiveButton("Ke Halaman Utama") { _, _ ->
                             navigateToCorrectActivity(role, id)
                         }
                         create()

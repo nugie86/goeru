@@ -1,11 +1,15 @@
 package com.tegas.mygoeruapps.ui.student
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import android.widget.SearchView
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
@@ -18,6 +22,9 @@ import com.tegas.mygoeruapps.data.ViewModelFactory
 import com.tegas.mygoeruapps.data.response.GuruItem
 import com.tegas.mygoeruapps.databinding.ActivityStudentBinding
 import com.tegas.mygoeruapps.ui.favorite.FavoriteActivity
+import com.tegas.mygoeruapps.ui.preference.AgePreferenceActivity
+import com.tegas.mygoeruapps.ui.preference.NewActivity
+import com.tegas.mygoeruapps.ui.preference.PreferencesActivity
 import com.tegas.mygoeruapps.ui.splash.WelcomeActivity
 import java.util.Locale
 
@@ -31,10 +38,29 @@ class StudentActivity : AppCompatActivity() {
     private lateinit var bottomSheetDialog: BottomSheetDialog
     private lateinit var originalTeacherList: List<GuruItem>
 
+    private val sharedPreferencesKey = "selected_checkboxes"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityStudentBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+//        if (!arePreferencesSet()) {
+//            startActivity(Intent(this, AgePreferenceActivity::class.java))
+//            finish()
+//            return
+//        } else {
+//            val sharedPreferences = getSharedPreferences(sharedPreferencesKey, Context.MODE_PRIVATE)
+//            val userAge = sharedPreferences.getString("$sharedPreferencesKey${0}", "")
+//            val userPref1 = sharedPreferences.getString("$sharedPreferencesKey${1}", "")
+//            val userPref2 = sharedPreferences.getString("$sharedPreferencesKey${2}", "")
+//            val userPref3 = sharedPreferences.getString("$sharedPreferencesKey${3}", "")
+//            Toast.makeText(this, "$userAge, $userPref1, $userPref2, $userPref3", Toast.LENGTH_LONG).show()
+//            Log.d("age", "$userAge")
+//            Log.d("pref1", "$userPref1")
+//            Log.d("pref2", "$userPref2")
+//            Log.d("pref3", "$userPref3")
+//        }
 
         getSession()
 
@@ -163,4 +189,45 @@ class StudentActivity : AppCompatActivity() {
         }
     }
 
+    private fun arePreferencesSet(): Boolean {
+        val sharedPreferences = getSharedPreferences(sharedPreferencesKey, Context.MODE_PRIVATE)
+        return sharedPreferences.contains("$sharedPreferencesKey${0}")
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+menuInflater.inflate(R.menu.menu_student, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+openMenu(item.itemId)
+        return super.onOptionsItemSelected(item)
+    }
+
+private fun openMenu(selectedMenu: Int) {
+    when(selectedMenu) {
+        R.id.preference-> {
+            val intent = Intent(this, PreferencesActivity::class.java)
+            startActivity(intent)
+        }
+    }
+}
+//    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+//
+//
+//        val searchItem = menu?.findItem(R.id.action_search)
+//        val searchView = searchItem?.actionView as SearchView
+//
+//        searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+//            override fun onQueryTextSubmit(query: String?): Boolean {
+//                return true
+//            }
+//
+//            override fun onQueryTextChange(newText: String?): Boolean {
+//                adapter.filter.filter(newText)
+//                return true
+//            }
+//        })
+//        return true
+//    }
 }
