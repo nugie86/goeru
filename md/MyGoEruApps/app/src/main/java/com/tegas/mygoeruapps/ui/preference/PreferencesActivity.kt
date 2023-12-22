@@ -4,23 +4,19 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.widget.ArrayAdapter
 import android.widget.CheckBox
-import android.widget.RadioButton
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AlertDialog
 import com.tegas.mygoeruapps.R
 import com.tegas.mygoeruapps.data.Result
 import com.tegas.mygoeruapps.data.ViewModelFactory
-import com.tegas.mygoeruapps.databinding.ActivityPreferenceBinding
 import com.tegas.mygoeruapps.databinding.ActivityPreferencesBinding
-import com.tegas.mygoeruapps.databinding.ActivityProfileBinding
 import com.tegas.mygoeruapps.ui.login.LoginActivity
 import com.tegas.mygoeruapps.ui.student.StudentActivity
 
-class PreferenceActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityPreferenceBinding
+class PreferencesActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityPreferencesBinding
     private val viewModel by viewModels<PreferencesViewModel> {
         ViewModelFactory.getInstance(this)
     }
@@ -36,8 +32,10 @@ class PreferenceActivity : AppCompatActivity() {
     private var antropology: Double = 0.0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityPreferenceBinding.inflate(layoutInflater)
+        binding = ActivityPreferencesBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        val token = intent.getStringExtra("token")
 
         val age = binding.etAge.text
         val cb_math = binding.cbMath
@@ -76,44 +74,37 @@ class PreferenceActivity : AppCompatActivity() {
                 antropology = if (cb_antropology.isChecked) 5.5 else 0.0
 
                 showVariableToast()
-                viewModel.getSession().observe(this) { user ->
-                    if (!user.isLogin) {
-                        Toast.makeText(this, "You need to login", Toast.LENGTH_LONG).show()
 
-                    } else {
+                viewModel.postPreferences(
+                    token!!,
+                    userAge,
+                    math,
+                    physics,
+                    chemistry,
+                    economy,
+                    biology,
+                    sosiology,
+                    history,
+                    geography,
+                    antropology
+                )
 
-                        viewModel.postPreferences(
-                            user.token,
-                            userAge,
-                            math,
-                            physics,
-                            chemistry,
-                            economy,
-                            biology,
-                            sosiology,
-                            history,
-                            geography,
-                            antropology
-                        )
 
-                        AlertDialog.Builder(this).apply {
-                            setTitle("Selamat!")
-                            setMessage("Preferensi telah diubah.")
-                            setCancelable(false)
-                            setPositiveButton("Kembali") { _, _ ->
-                                val intent = Intent(context, StudentActivity::class.java)
-                                startActivity(intent)
-                                finish()
-                            }
-                            create()
-                            show()
-                        }
+                AlertDialog.Builder(this).apply {
+                    setTitle("Selamat!")
+                    setMessage("Terima kasih telah mengisi jawaban! Ayo Login.")
+                    setCancelable(false)
+                    setPositiveButton("Ke Halaman Login") { _, _ ->
+                        val intent = Intent(context, LoginActivity::class.java)
+                        startActivity(intent)
+                        finish()
                     }
+                    create()
+                    show()
                 }
 
-
             } else {
-                Toast.makeText(this, "Please fill your age and choose exactly 3 subjects", Toast.LENGTH_LONG)
+                Toast.makeText(this, "Please fill your age and choose exactly 3 sucjects", Toast.LENGTH_LONG)
                     .show()
 
             }

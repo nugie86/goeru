@@ -19,6 +19,7 @@ import com.tegas.mygoeruapps.databinding.ActivityRegisterBinding
 import com.tegas.mygoeruapps.data.Result
 import com.tegas.mygoeruapps.ui.login.LoginActivity
 import com.tegas.mygoeruapps.ui.preference.AgePreferenceActivity
+import com.tegas.mygoeruapps.ui.preference.PreferencesActivity
 
 class RegisterActivity : AppCompatActivity() {
 
@@ -175,11 +176,12 @@ class RegisterActivity : AppCompatActivity() {
                 is Result.Success -> {
                     showLoading(false)
                     AlertDialog.Builder(this).apply {
-                        setTitle("Alright!")
-                        setMessage("Account with $email is created. Please answer these two questions")
+                        setTitle("Selamat!")
+                        setMessage("Akun dengan email $email telah dibuat.")
                         setCancelable(false)
                         setPositiveButton("Okay") { _, _ ->
-                            val intent = Intent(context, AgePreferenceActivity::class.java)
+                            val intent = Intent(context, PreferencesActivity::class.java)
+                            intent.putExtra("token", it.data.token)
                             startActivity(intent)
                             finish()
                         }

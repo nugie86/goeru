@@ -37,13 +37,6 @@ class TeacherActivity : AppCompatActivity() {
         binding = ActivityTeacherBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val id = intent.getStringExtra("id")
-        binding.btnProfile.setOnClickListener {
-            val intent = Intent(this, ProfileActivity::class.java)
-            intent.putExtra("id", id)
-            startActivity(intent)
-        }
-
         getSession()
 
         if (!allPermissionGranted()) {
@@ -59,6 +52,7 @@ class TeacherActivity : AppCompatActivity() {
         }
 
         postImage()
+        postDescription()
 
         binding.cameraButton.setOnClickListener {
             currentImageUri = getImageUri(this)
@@ -69,7 +63,22 @@ class TeacherActivity : AppCompatActivity() {
             launcherGallery.launch(PickVisualMediaRequest(ActivityResultContracts.PickVisualMedia.ImageOnly))
         }
 
-        binding.uploadButton.setOnClickListener {
+        binding.descriptionButton.setOnClickListener {
+            var token: String
+            val desc = binding.edtDescription.text.toString()
+
+            if (desc.isNotEmpty()) {
+                showProgressIndicator(true)
+
+                viewModel.getSession().observe(this) { user ->
+                    token = user.token
+                    viewModel.postDescription(token, desc)
+                }
+            } else {
+                showToast("Fill the description")
+            }
+        }
+        binding.imageBtn.setOnClickListener {
             var token: String
             currentImageUri?.let { uri ->
                 val imageFile = uriToFile(uri, this).reduceFileImage()
@@ -103,18 +112,45 @@ class TeacherActivity : AppCompatActivity() {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }
 
-    private fun postImage() {
-        viewModel.postResponse.observe(this){
+    private fun postDescription() {
+        viewModel.descriptionResponse.observe(this) {
             when (it) {
                 is Result.Loading -> {
                     showProgressIndicator(true)
                     disableInterface()
                 }
+
+                is Result.Error -> {
+                    showProgressIndicator(false)
+                    enableInterface()
+                    Toast.makeText(this, it.error, Toast.LENGTH_LONG).show()
+                    Log.d("Desc", "${it.error}")
+                }
+
+                is Result.Success -> {
+                    showProgressIndicator(false)
+                    enableInterface()
+                    Toast.makeText(this, "Your description has been updated", Toast.LENGTH_SHORT)
+                        .show()
+                }
+            }
+        }
+    }
+
+    private fun postImage() {
+        viewModel.postResponse.observe(this) {
+            when (it) {
+                is Result.Loading -> {
+                    showProgressIndicator(true)
+                    disableInterface()
+                }
+
                 is Result.Error -> {
                     showProgressIndicator(false)
                     Toast.makeText(this, it.error, Toast.LENGTH_SHORT).show()
                     enableInterface()
                 }
+
                 is Result.Success -> {
                     showProgressIndicator(false)
                     enableInterface()
@@ -123,33 +159,40 @@ class TeacherActivity : AppCompatActivity() {
             }
         }
     }
+
     private fun disableInterface() {
         binding.cameraButton.isEnabled = false
         binding.galleryButton.isEnabled = false
-        binding.uploadButton.isEnabled = false
+        binding.imageBtn.isEnabled = false
         binding.edtDescription.isEnabled = false
+        binding.descriptionButton.isEnabled = false
     }
 
     private fun enableInterface() {
         binding.cameraButton.isEnabled = true
         binding.galleryButton.isEnabled = true
-        binding.uploadButton.isEnabled = true
+        binding.imageBtn.isEnabled = true
         binding.edtDescription.isEnabled = true
+        binding.descriptionButton.isEnabled = true
     }
 
     private val requestPermission = registerForActivityResult(
-        ActivityResultContracts.RequestPermission()) {
-            isGranted: Boolean ->
-        when (isGranted){
+        ActivityResultContracts.RequestPermission()
+    ) { isGranted: Boolean ->
+        when (isGranted) {
             true -> {
-                Toast.makeText(this, "Permission request granted", Toast.LENGTH_LONG).show()}
+                Toast.makeText(this, "Permission request granted", Toast.LENGTH_LONG).show()
+            }
+
             false -> {
-                Toast.makeText(this, "Permission request denied", Toast.LENGTH_LONG).show()}
+                Toast.makeText(this, "Permission request denied", Toast.LENGTH_LONG).show()
+            }
         }
     }
 
     private fun allPermissionGranted() =
-        ContextCompat.checkSelfPermission(this, REQUIRED_PERMISSION
+        ContextCompat.checkSelfPermission(
+            this, REQUIRED_PERMISSION
         ) == PackageManager.PERMISSION_GRANTED
 
 
@@ -172,8 +215,9 @@ class TeacherActivity : AppCompatActivity() {
     }
 
     private fun showProgressIndicator(isLoading: Boolean) {
-        binding.progressIndicator.visibility = if(isLoading) View.VISIBLE else View.GONE
+        binding.progressIndicator.visibility = if (isLoading) View.VISIBLE else View.GONE
     }
+
     companion object {
         private const val REQUIRED_PERMISSION = Manifest.permission.CAMERA
     }
@@ -185,6 +229,14 @@ class TeacherActivity : AppCompatActivity() {
             if (!user.isLogin) {
                 startActivity(Intent(this, WelcomeActivity::class.java))
                 finish()
+            }
+
+            val userId = user.id
+
+            binding.btnProfile.setOnClickListener {
+                val intent = Intent(this, ProfileActivity::class.java)
+                intent.putExtra("id", userId)
+                startActivity(intent)
             }
         }
         showLoading(false)

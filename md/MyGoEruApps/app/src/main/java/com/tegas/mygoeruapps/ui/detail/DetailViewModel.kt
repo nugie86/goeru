@@ -7,6 +7,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.asLiveData
 import androidx.lifecycle.viewModelScope
 import com.tegas.mygoeruapps.data.UserRepository
 import com.tegas.mygoeruapps.data.database.DataBaseModule
@@ -20,6 +21,7 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import com.tegas.mygoeruapps.data.Result
+import com.tegas.mygoeruapps.data.UserModel
 
 class DetailViewModel(private val db: DataBaseModule) : ViewModel() {
 

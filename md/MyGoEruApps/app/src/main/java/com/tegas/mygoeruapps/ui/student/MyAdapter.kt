@@ -4,6 +4,8 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Filter
+import android.widget.Filterable
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.tegas.mygoeruapps.R
@@ -13,7 +15,7 @@ import com.tegas.mygoeruapps.ui.detail.DetailActivity
 import java.util.Locale
 
 class MyAdapter(private val originalTeacherList: List<GuruItem>) :
-    RecyclerView.Adapter<MyAdapter.ListViewHolder>() {
+    RecyclerView.Adapter<MyAdapter.ListViewHolder>(), Filterable {
 
     private var filteredTeacherList: List<GuruItem> = originalTeacherList.toList()
 
@@ -87,5 +89,36 @@ class MyAdapter(private val originalTeacherList: List<GuruItem>) :
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
         val teacher = filteredTeacherList[position]
         holder.bind(teacher)
+    }
+
+    override fun getFilter(): Filter {
+        return object : Filter(){
+            override fun performFiltering(constraint: CharSequence?): FilterResults {
+                val filterResults = mutableListOf<GuruItem>()
+
+                if (constraint.isNullOrBlank()) {
+                    filterResults.addAll(originalTeacherList)
+                } else {
+                    val filterPattern = constraint.toString().toLowerCase(Locale.getDefault()).trim()
+
+                    originalTeacherList.forEach { teacher ->
+                        if (teacher.mapel?.toLowerCase(Locale.getDefault())?.contains(filterPattern) == true ||
+                            teacher.nama?.toLowerCase(Locale.getDefault())?.contains(filterPattern) == true ||
+                            teacher.asal?.toLowerCase(Locale.getDefault())?.contains(filterPattern) == true
+                                ) {
+                            filterResults.add(teacher)
+                        }
+                    }
+                }
+                val results = FilterResults()
+                results.values = filterResults
+                return results
+            }
+
+            override fun publishResults(constraint: CharSequence?, results: FilterResults?) {
+                filteredTeacherList = results?.values as? List<GuruItem> ?: emptyList()
+                notifyDataSetChanged()
+            }
+        }
     }
 }

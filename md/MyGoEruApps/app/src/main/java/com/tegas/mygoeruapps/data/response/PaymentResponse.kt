@@ -2,13 +2,10 @@ package com.tegas.mygoeruapps.data.response
 
 import com.google.gson.annotations.SerializedName
 
-data class RegisterResponse(
+data class PaymentResponse(
 
-	@field:SerializedName("message")
-	val message: String,
-
-	@field:SerializedName("success")
-	val success: Boolean,
+	@field:SerializedName("redirect_url")
+	val redirectUrl: String,
 
 	@field:SerializedName("token")
 	val token: String

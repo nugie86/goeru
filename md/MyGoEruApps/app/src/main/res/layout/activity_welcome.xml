@@ -12,7 +12,7 @@
         android:id="@+id/started_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/started_title"
+        android:text="GO ERU"
         android:fontFamily="@font/montserrat"
         android:textColor="@color/white"
         android:textSize="36sp"
@@ -26,9 +26,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:text="@string/started_sub_title"
+        android:text="WHERE LEARNING MEETS OPPORTUNITY"
         android:fontFamily="@font/montserrat"
         android:lineHeight="20sp"
+        android:textStyle="bold"
         android:textColor="@color/white"
         android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -41,10 +42,10 @@
         android:layout_height="wrap_content"
         android:contentDescription="@string/ilustration_img"
         android:src="@drawable/illustration_started"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_main_page"

@@ -10,6 +10,7 @@ import android.widget.Toast
 import com.tegas.mygoeruapps.R
 import com.tegas.mygoeruapps.databinding.ActivityNewBinding
 import com.tegas.mygoeruapps.ui.login.LoginActivity
+import com.tegas.mygoeruapps.ui.student.StudentActivity
 
 class NewActivity : AppCompatActivity() {
     private lateinit var binding: ActivityNewBinding
@@ -33,13 +34,15 @@ class NewActivity : AppCompatActivity() {
 
         binding.nextButton.setOnClickListener {
             val selectedCheckBoxes = checkBoxes.filter { it.isChecked }
-            if (selectedCheckBoxes.size >= 3) {
+            if (selectedCheckBoxes.size == 3) {
                 saveCheckBoxState(checkBoxes)
 
                 val selectedOptionsText = selectedCheckBoxes.joinToString(", ") { checkBox ->
                     checkBox.text.toString()
                 }
                 Toast.makeText(this, "Selected options: $selectedOptionsText", Toast.LENGTH_SHORT).show()
+                startActivity(Intent(this, StudentActivity::class.java))
+                finish()
             } else {
                 Toast.makeText(this, "Please select 3", Toast.LENGTH_SHORT).show()
             }

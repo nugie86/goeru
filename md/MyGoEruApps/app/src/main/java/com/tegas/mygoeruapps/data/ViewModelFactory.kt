@@ -5,6 +5,8 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.tegas.mygoeruapps.data.Injection.provideRepository
 import com.tegas.mygoeruapps.ui.login.LoginViewModel
+import com.tegas.mygoeruapps.ui.order.OrderViewModel
+import com.tegas.mygoeruapps.ui.preference.PreferencesViewModel
 import com.tegas.mygoeruapps.ui.register.RegisterViewModel
 import com.tegas.mygoeruapps.ui.splash.SplashViewModel
 import com.tegas.mygoeruapps.ui.student.StudentViewModel
@@ -29,6 +31,12 @@ class ViewModelFactory(private val repository: UserRepository): ViewModelProvide
             }
             modelClass.isAssignableFrom(TeacherViewModel::class.java) -> {
                 TeacherViewModel(repository) as T
+            }
+            modelClass.isAssignableFrom(OrderViewModel::class.java) -> {
+                OrderViewModel(repository) as T
+            }
+            modelClass.isAssignableFrom(PreferencesViewModel::class.java) -> {
+                PreferencesViewModel(repository) as T
             }
             else -> throw IllegalArgumentException("Unknown ViewModel class: " + modelClass.name)
         }

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:focusableInTouchMode="true"
     android:padding="20dp"
-    tools:context=".ui.detail.DetailActivity">
+    tools:context=".ui.detail.SimilarDetailActivity">
 
     <ScrollView
         android:layout_width="match_parent"

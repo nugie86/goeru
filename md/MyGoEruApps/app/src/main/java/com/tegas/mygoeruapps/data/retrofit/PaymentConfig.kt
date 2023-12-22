@@ -4,9 +4,8 @@ import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import java.util.concurrent.TimeUnit
 
-class ApiConfig {
+class PaymentConfig {
     companion object {
         fun apiService(): ApiService {
             val loggingInterceptor =
@@ -15,7 +14,7 @@ class ApiConfig {
                 .addInterceptor(loggingInterceptor)
                 .build()
             val retrofit = Retrofit.Builder()
-                .baseUrl("https://goeru-4567.et.r.appspot.com/")
+                .baseUrl("https://app.sandbox.midtrans.com/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(client)
                 .build()
