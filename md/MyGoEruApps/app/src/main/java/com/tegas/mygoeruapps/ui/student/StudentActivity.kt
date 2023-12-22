@@ -180,10 +180,10 @@ class StudentActivity : AppCompatActivity() {
             bottomSheetDialog.show()
         }
 
-        binding.fabRecomend.setBackgroundColor(resources.getColor(R.color.primary_color, null))
-        binding.fabRecomend.setOnClickListener {
+//      binding.fabRecomend.setBackgroundColor(resources.getColor(R.color.primary_color, null))
+//      binding.fabRecomend.setOnClickListener {
 //            val intent = Intent(this, )
-        }
+//      }
 
     }
 
