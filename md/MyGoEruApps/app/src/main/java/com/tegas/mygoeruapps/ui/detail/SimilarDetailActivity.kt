@@ -2,13 +2,13 @@ package com.tegas.mygoeruapps.ui.detail
 
 import android.content.Intent
 import android.content.res.ColorStateList
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.annotation.ColorRes
-import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.text.HtmlCompat
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -18,13 +18,15 @@ import com.tegas.mygoeruapps.R
 import com.tegas.mygoeruapps.data.database.DataBaseModule
 import com.tegas.mygoeruapps.data.response.Guru
 import com.tegas.mygoeruapps.data.response.GuruItem
+import com.tegas.mygoeruapps.data.response.SimilarGurusItem
 import com.tegas.mygoeruapps.databinding.ActivityDetailBinding
+import com.tegas.mygoeruapps.databinding.ActivitySimilarDetailBinding
 import com.tegas.mygoeruapps.ui.order.OrderActivity
 import com.tegas.mygoeruapps.ui.teacher.ReviewAdapter
 
-class DetailActivity : AppCompatActivity() {
+class SimilarDetailActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityDetailBinding
+    private lateinit var binding: ActivitySimilarDetailBinding
     private val viewModel by viewModels<DetailViewModel>() {
         DetailViewModel.Factory(DataBaseModule(this))
     }
@@ -34,13 +36,13 @@ class DetailActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityDetailBinding.inflate(layoutInflater)
+        binding = ActivitySimilarDetailBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         teacherId = intent.getStringExtra("teacherId")
         Log.d("Teacher", "teacher id: $teacherId")
 
-        val teacherItem = intent.getParcelableExtra<GuruItem>("teacherItem")
+        val teacherItem = intent.getParcelableExtra<SimilarGurusItem>("teacherItem")
         val id = teacherItem?.idUser
 
         viewModel.getTeacherDetail(id)
@@ -109,21 +111,6 @@ class DetailActivity : AppCompatActivity() {
 
         }
 
-        binding.btnFav.setBackgroundColor(resources.getColor(R.color.primary_color, null))
-
-        viewModel.resultFavorite.observe(this) {
-            binding.btnFav.changeIconColor(R.color.primary_color)
-        }
-        viewModel.resultDeleteFavorite.observe(this) {
-            binding.btnFav.changeIconColor(R.color.white)
-        }
-        binding.btnFav.setOnClickListener {
-            viewModel.saveUser(teacherItem)
-        }
-        viewModel.findFavorite(teacherItem?.idUser ?: "g0") {
-            binding.btnFav.changeIconColor(R.color.primary_color)
-        }
-
         binding.btnOrder.setBackgroundColor(resources.getColor(R.color.primary_color, null))
 
         binding.btnOrder.setOnClickListener {
@@ -144,5 +131,4 @@ class DetailActivity : AppCompatActivity() {
     fun FloatingActionButton.changeIconColor(@ColorRes color: Int) {
         imageTintList = ColorStateList.valueOf(ContextCompat.getColor(this.context, color))
     }
-
 }

@@ -179,6 +179,12 @@ class StudentActivity : AppCompatActivity() {
             bottomSheetDialog.setContentView(dialogView)
             bottomSheetDialog.show()
         }
+
+        binding.fabRecomend.setBackgroundColor(resources.getColor(R.color.primary_color, null))
+        binding.fabRecomend.setOnClickListener {
+//            val intent = Intent(this, )
+        }
+
     }
 
     private fun setFavoriteButton() {

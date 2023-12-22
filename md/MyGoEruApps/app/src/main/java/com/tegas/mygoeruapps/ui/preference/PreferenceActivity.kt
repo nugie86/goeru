@@ -78,7 +78,7 @@ class PreferenceActivity : AppCompatActivity() {
                 showVariableToast()
                 viewModel.getSession().observe(this) { user ->
                     if (!user.isLogin) {
-                        Toast.makeText(this, "Anda harus login terlebih dahulu", Toast.LENGTH_LONG).show()
+                        Toast.makeText(this, "You need to login", Toast.LENGTH_LONG).show()
 
                     } else {
 
@@ -113,7 +113,7 @@ class PreferenceActivity : AppCompatActivity() {
 
 
             } else {
-                Toast.makeText(this, "Mohon isi usia dan pilih 3 mata pelajaran", Toast.LENGTH_LONG)
+                Toast.makeText(this, "Please fill your age and choose exactly 3 subjects", Toast.LENGTH_LONG)
                     .show()
 
             }

@@ -104,7 +104,7 @@ class PreferencesActivity : AppCompatActivity() {
                 }
 
             } else {
-                Toast.makeText(this, "Mohon isi usia dan pilih 3 mata pelajaran", Toast.LENGTH_LONG)
+                Toast.makeText(this, "Please fill your age and choose exactly 3 sucjects", Toast.LENGTH_LONG)
                     .show()
 
             }

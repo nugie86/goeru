@@ -233,11 +233,11 @@ class TeacherActivity : AppCompatActivity() {
 
             val userId = user.id
 
-//            binding.btnProfile.setOnClickListener {
-//                val intent = Intent(this, ProfileActivity::class.java)
-//                intent.putExtra("id", userId)
-//                startActivity(intent)
-//            }
+            binding.btnProfile.setOnClickListener {
+                val intent = Intent(this, ProfileActivity::class.java)
+                intent.putExtra("id", userId)
+                startActivity(intent)
+            }
         }
         showLoading(false)
     }

@@ -1,16 +1,17 @@
 package com.tegas.mygoeruapps.ui.teacher
 
+import android.media.Rating
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.tegas.mygoeruapps.data.response.Rating
+import com.tegas.mygoeruapps.data.response.RatingsItem
 import com.tegas.mygoeruapps.databinding.ReviewLayoutBinding
 
 class ReviewAdapter : RecyclerView.Adapter<ReviewAdapter.ListViewHolder>() {
 
-    private val listOfReview = ArrayList<Rating>()
+    private val listOfReview = ArrayList<RatingsItem>()
 
-    fun addReviewList(list: List<Rating>) {
+    fun addReviewList(list: List<RatingsItem>) {
         this.listOfReview.clear()
         this.listOfReview.addAll(list)
         notifyDataSetChanged()

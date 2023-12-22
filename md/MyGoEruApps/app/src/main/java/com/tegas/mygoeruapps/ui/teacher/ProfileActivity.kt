@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.tegas.mygoeruapps.R
 import com.tegas.mygoeruapps.data.ViewModelFactory
-import com.tegas.mygoeruapps.data.response.Rating
+import com.tegas.mygoeruapps.data.response.RatingsItem
 import com.tegas.mygoeruapps.databinding.ActivityProfileBinding
 
 class ProfileActivity : AppCompatActivity() {
@@ -49,10 +49,10 @@ class ProfileActivity : AppCompatActivity() {
 
             Log.d("API Response", "Entire API response: $it") // Print the entire API response
 
-            Log.d("it.guru.rating", "it.guru.rating: ${it.guru.rating}")
+            Log.d("it.guru.rating", "it.guru.rating: ${it.guru.ratings}")
 
             try {
-                rvAdapter.addReviewList(teacher.rating)
+                rvAdapter.addReviewList(teacher.ratings)
             } catch (e: Exception) {
                 Toast.makeText(this, "FAILED TO ADD REVIEW LIST", Toast.LENGTH_LONG).show()
                 Log.e("Adapter", "ERROR TO ADD REVIEW LIST")

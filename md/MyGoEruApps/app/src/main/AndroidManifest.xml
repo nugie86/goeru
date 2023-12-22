@@ -35,6 +35,12 @@
         android:theme="@style/Theme.MyGoEruApps"
         tools:targetApi="31">
         <activity
+            android:name=".ui.RecomendationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.detail.SimilarDetailActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.preference.PreferencesActivity"
             android:exported="false" />
         <activity

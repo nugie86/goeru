@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.favorite.FavoriteActivity">
+    tools:context=".ui.RecomendationActivity">
+
 
     <TextView
-        android:id="@+id/favorite_title"
+        android:id="@+id/recomend_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Your Favorite Teachers"
+        android:text="Recomended Teacher"
         style="@style/Title"
         android:textColor="@color/primary_color"
         android:gravity="center_horizontal"
@@ -19,7 +20,7 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_fav"
-        app:layout_constraintTop_toBottomOf="@id/favorite_title"
+        app:layout_constraintTop_toBottomOf="@id/recomend_title"
         android:layout_width="match_parent"
         android:layout_height="600dp"
         android:layout_marginTop="18dp"

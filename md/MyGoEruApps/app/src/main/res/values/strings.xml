@@ -17,8 +17,8 @@
     </string>
 
     <string name="register_sub_title">
-        <font color="#00C9B8"><b>Daftar</b></font>
-        dengan mudah.
+        <font color="#00C9B8"><b>Register</b></font>
+        a new account.
     </string>
 
     <string name="login_email">Your email</string>
@@ -34,7 +34,7 @@
         <font color="#00C9B8"><b>Login</b></font>
     </string>
     <string name="btn_login">Login</string>
-    <string name="register_title">Buat Akun Baru</string>
+    <string name="register_title">Register</string>
     <string name="register_fullname">Your full name</string>
     <string name="register_email">Your email</string>
     <string name="register_username">Your username</string>

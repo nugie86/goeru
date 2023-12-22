@@ -70,7 +70,7 @@ class OrderActivity : AppCompatActivity() {
 
         viewModel.getSession().observe(this) { user ->
             if (!user.isLogin) {
-                Toast.makeText(this, "Anda harus login untuk memesan", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "You need to login to order", Toast.LENGTH_LONG).show()
                 startActivity(Intent(this, LoginActivity::class.java))
                 finish()
             } else {
