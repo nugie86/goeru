@@ -1,9 +1,9 @@
-Goeru Backend Repository
+# Goeru Backend Repository
 
 Backend server for Goeru Application
 
 
-HOW TO RUN
+## HOW TO RUN
 
 1. Clone Repository
 2. Install the node module with the npm installl command
