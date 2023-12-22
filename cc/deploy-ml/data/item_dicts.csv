@@ -1,0 +1,201 @@
+teacher_id,name,fields
+1,Sabrina Fauzia Alisha,Mathematics | 
+2,Calila Putri Syakira,Mathematics | 
+3,Mahila Putri Rahmana,Mathematics | 
+4,Hikam Fahrian Basalamah,Mathematics | 
+5,Zahra Maheswari Humaira,Mathematics | 
+6,Zahra Annisa Rahmana,Physics | 
+7,Gilang Mugni Arighi,Physics | 
+8,Nayla Fauzia Alisha,Physics | 
+9,Sabrina Putri Humaira,Physics | 
+10,Nabila Maheswari Humaira,Physics | 
+11,Mahila Shabira Syifa,Biologi | 
+12,Calila Putri Khadisya,Biologi | 
+13,Nayla Annisa Syakira,Biologi | 
+14,Kevin Fajrul Khattab,Biologi | 
+15,Calila Khalista Humaira,Biologi | 
+16,Hikam Mugni Basalamah,Chemistry | 
+17,Hanif Fauzi Basalamah,Chemistry | 
+18,Zahra Maheswari Syakira,Chemistry | 
+19,Kevin Mugni Basalamah,Chemistry | 
+20,Zahra Shabira Khadisya,Chemistry | 
+21,Hikam Rashid Falah,Mathematics | Chemistry | 
+22,Calila Khalista Alisha,Mathematics | Physics | Biologi | Chemistry | 
+23,Kevin Rashid Arighi,Physics | Biologi | Chemistry | 
+24,Hikam Fahrian Khattab,Mathematics | Physics | Chemistry | 
+25,Calila Putri Humaira,Biologi | Chemistry | 
+26,Gilang Fahrian Basalamah,Biologi | 
+27,Kevin Fajrul Thalib,Physics | 
+28,Nabila Shabira Alisha,Physics | Chemistry | 
+29,Mahila Annisa Khadisya,Mathematics | Biologi | Chemistry | 
+30,Mahila Maheswari Syakira,Mathematics | Biologi | 
+31,Zahra Nisya Syifa,Mathematics | Biologi | Chemistry | 
+32,Calila Annisa Syifa,Mathematics | Physics | 
+33,Kevin Rafli Khattab,Physics | Biologi | 
+34,Gilang Rafli Pamula,Physics | 
+35,Hikam Rashid Arighi,Mathematics | Physics | Chemistry | 
+36,Mahila Shabira Khadisya,Mathematics | Biologi | 
+37,Mahila Putri Salsabila,Physics | Biologi | 
+38,Nayla Khalista Salsabila,Mathematics | Physics | 
+39,Gilang Rafli Khattab,Biologi | 
+40,Mahila Fauzia Syakira,Physics | Chemistry | 
+41,Kevin Rashid Basalamah,Physics | Biologi | 
+42,Nayla Maheswari Khadisya,Mathematics | Physics | 
+43,Zahra Khalista Salsabila,Mathematics | Physics | 
+44,Hanif Rashid Basalamah,Mathematics | Physics | Biologi | Chemistry | 
+45,Hanif Arkananta Basalamah,Physics | Chemistry | 
+46,Gilang Rashid Ramadhan,Mathematics | Physics | 
+47,Hanif Fajrul Thalib,Mathematics | Physics | 
+48,Kevin Fahrian Ramadhan,Mathematics | Physics | Biologi | Chemistry | 
+49,Calila Maheswari Syifa,Mathematics | Physics | Biologi | Chemistry | 
+50,Zulfan Mugni Thalib,Chemistry | 
+51,Zahra Shabira Humaira,Physics | Biologi | 
+52,Gilang Fahrian Thalib,Mathematics | Biologi | 
+53,Zulfan Rafli Khattab,Physics | Chemistry | 
+54,Mahila Shabira Syakira,Physics | 
+55,Hikam Rafli Falah,Physics | 
+56,Hakim Fauzi Pamula,Mathematics | 
+57,Kevin Rafli Basalamah,Mathematics | Chemistry | 
+58,Hakim Fahrian Pamula,Biologi | 
+59,Mahila Qolbu Salsabila,Chemistry | 
+60,Zahra Nisya Humaira,Mathematics | Physics | Chemistry | 
+61,Hanif Arshaka Ramadhan,Mathematics | Physics | 
+62,Zulfan Fauzi Ramadhan,Mathematics | Physics | 
+63,Nabila Maheswari Salsabila,Mathematics | Biologi | 
+64,Nayla Shabira Salsabila,Chemistry | 
+65,Hikam Arshaka Thalib,Mathematics | Physics | Chemistry | 
+66,Hanif Rafli Falah,Mathematics | Physics | 
+67,Gilang Mugni Falah,Mathematics | Physics | Biologi | 
+68,Sabrina Khalista Khadisya,Mathematics | Physics | Chemistry | 
+69,Hanif Mugni Arighi,Biologi | Chemistry | 
+70,Hanif Mugni Pamula,Physics | 
+71,Mahila Khalista Khadisya,Mathematics | Physics | Biologi | 
+72,Zulfan Fahrian Arighi,Mathematics | Biologi | 
+73,Zulfan Arshaka Khattab,Mathematics | Physics | Chemistry | 
+74,Nabila Annisa Syakira,Mathematics | 
+75,Kevin Mugni Khattab,Physics | Biologi | Chemistry | 
+76,Hanif Fahrian Falah,Biologi | 
+77,Zahra Fauzia Salsabila,Physics | Chemistry | 
+78,Hikam Rafli Arighi,Mathematics | Physics | Biologi | Chemistry | 
+79,Hanif Rafli Thalib,Mathematics | Physics | 
+80,Mahila Shabira Salsabila,Mathematics | Biologi | 
+81,Calila Maheswari Salsabila,Mathematics | Physics | Chemistry | 
+82,Sabrina Khalista Alisha,Mathematics | Biologi | Chemistry | 
+83,Kevin Fauzi Pamula,Physics | 
+84,Zulfan Rafli Arighi,Chemistry | 
+85,Zulfan Arshaka Ramadhan,Mathematics | 
+86,Nayla Shabira Rahmana,Mathematics | Physics | 
+87,Calila Maheswari Khadisya,Physics | 
+88,Calila Qolbu Khadisya,Biologi | Chemistry | 
+89,Zulfan Fajrul Falah,Biologi | 
+90,Sabrina Maheswari Rahmana,Mathematics | Physics | Biologi | Chemistry | 
+91,Gilang Fahrian Arighi,Biologi | 
+92,Zulfan Rafli Pamula,Mathematics | Physics | Biologi | 
+93,Kevin Fahrian Falah,Chemistry | 
+94,Nabila Maheswari Syifa,Mathematics | Physics | Chemistry | 
+95,Nayla Annisa Humaira,Biologi | Chemistry | 
+96,Hanif Mugni Thalib,Mathematics | 
+97,Mahila Putri Humaira,Physics | Chemistry | 
+98,Zulfan Arkananta Khattab,Mathematics | Biologi | Chemistry | 
+99,Gilang Rashid Pamula,Mathematics | Biologi | Chemistry | 
+100,Kevin Rafli Thalib,Mathematics | Chemistry | 
+101,Nayla Maheswari Salsabila,Economy | 
+102,Kevin Rashid Khattab,Economy | 
+103,Nayla Qolbu Alisha,Economy | 
+104,Gilang Fajrul Ramadhan,Economy | 
+105,Nayla Khalista Khadisya,Economy | 
+106,Hanif Arshaka Khattab,Sosiology | 
+107,Nayla Khalista Humaira,Sosiology | 
+108,Nayla Shabira Syakira,Sosiology | 
+109,Zahra Qolbu Syakira,Sosiology | 
+110,Sabrina Qolbu Salsabila,Sosiology | 
+111,Zulfan Arshaka Falah,Geography | 
+112,Calila Shabira Salsabila,Geography | 
+113,Gilang Fajrul Khattab,Geography | 
+114,Nayla Shabira Syifa,Geography | 
+115,Kevin Arshaka Pamula,Geography | 
+116,Sabrina Qolbu Khadisya,History | 
+117,Kevin Arkananta Arighi,History | 
+118,Hanif Arshaka Basalamah,History | 
+119,Hanif Arshaka Falah,History | 
+120,Hanif Rashid Ramadhan,History | 
+121,Zahra Annisa Alisha,Antropologi | 
+122,Zahra Khalista Rahmana,Antropologi | 
+123,Mahila Khalista Syifa,Antropologi | 
+124,Sabrina Putri Syifa,Antropologi | 
+125,Nabila Shabira Syakira,Antropologi | 
+126,Hikam Mugni Khattab,Sosiology | History | Antropologi | 
+127,Gilang Fauzi Ramadhan,Economy | Geography | 
+128,Calila Maheswari Rahmana,Geography | History | Antropologi | 
+129,Nayla Nisya Humaira,Sosiology | Geography | Antropologi | 
+130,Calila Qolbu Rahmana,Economy | Geography | History | Antropologi | 
+131,Nayla Putri Rahmana,History | Antropologi | 
+132,Zahra Putri Syakira,Geography | Antropologi | 
+133,Hikam Fauzi Pamula,Economy | Sosiology | Antropologi | 
+134,Zahra Putri Rahmana,Economy | Sosiology | Antropologi | 
+135,Mahila Khalista Humaira,Economy | Sosiology | Antropologi | 
+136,Kevin Fahrian Arighi,Economy | Antropologi | 
+137,Kevin Arshaka Ramadhan,Economy | Antropologi | 
+138,Nayla Qolbu Humaira,Geography | 
+139,Mahila Fauzia Rahmana,Economy | Geography | History | Antropologi | 
+140,Hanif Fajrul Pamula,Economy | Sosiology | Geography | 
+141,Gilang Fajrul Thalib,Economy | Sosiology | Geography | History | Antropologi | 
+142,Kevin Arshaka Arighi,Sosiology | Antropologi | 
+143,Zulfan Fauzi Khattab,Sosiology | Geography | Antropologi | 
+144,Nabila Annisa Humaira,Economy | 
+145,Kevin Rashid Ramadhan,Economy | Sosiology | History | 
+146,Zahra Fauzia Syakira,History | Antropologi | 
+147,Zulfan Fahrian Basalamah,Sosiology | Geography | History | Antropologi | 
+148,Calila Shabira Syifa,Sosiology | Geography | Antropologi | 
+149,Hakim Fajrul Thalib,Sosiology | History | Antropologi | 
+150,Zahra Qolbu Rahmana,Economy | Geography | Antropologi | 
+151,Zahra Annisa Salsabila,Sosiology | Geography | History | 
+152,Sabrina Maheswari Salsabila,Antropologi | 
+153,Mahila Nisya Alisha,Sosiology | Geography | History | 
+154,Mahila Annisa Alisha,Geography | Antropologi | 
+155,Hanif Arshaka Arighi,Economy | History | 
+156,Zulfan Mugni Khattab,Geography | 
+157,Zulfan Fahrian Pamula,Economy | Sosiology | History | Antropologi | 
+158,Calila Nisya Syakira,Economy | Geography | History | 
+159,Hikam Arkananta Arighi,Economy | Sosiology | History | 
+160,Gilang Rafli Arighi,Economy | Sosiology | 
+161,Sabrina Fauzia Syakira,Geography | History | 
+162,Calila Maheswari Syakira,Economy | History | 
+163,Hanif Rashid Arighi,Economy | Sosiology | Geography | History | Antropologi | 
+164,Hikam Rafli Khattab,Economy | Sosiology | Antropologi | 
+165,Kevin Mugni Thalib,Economy | History | 
+166,Gilang Arkananta Basalamah,Economy | Geography | Antropologi | 
+167,Nabila Annisa Alisha,Sosiology | History | 
+168,Mahila Annisa Humaira,Economy | Geography | Antropologi | 
+169,Zahra Khalista Syifa,Economy | Geography | 
+170,Gilang Rafli Thalib,Economy | Geography | History | Antropologi | 
+171,Kevin Rashid Thalib,Geography | History | 
+172,Zulfan Rashid Pamula,History | Antropologi | 
+173,Kevin Fahrian Pamula,Sosiology | Geography | History | 
+174,Nayla Khalista Syakira,Economy | Sosiology | Geography | 
+175,Mahila Nisya Humaira,Economy | 
+176,Nayla Maheswari Rahmana,Economy | Geography | 
+177,Sabrina Maheswari Humaira,Economy | Geography | History | Antropologi | 
+178,Zahra Shabira Alisha,Geography | 
+179,Hikam Mugni Ramadhan,Geography | History | 
+180,Nabila Shabira Khadisya,Economy | Geography | 
+181,Zahra Putri Syifa,Economy | Sosiology | Geography | History | Antropologi | 
+182,Hanif Arkananta Pamula,Geography | History | Antropologi | 
+183,Calila Fauzia Alisha,Economy | Geography | 
+184,Nayla Khalista Syifa,Economy | Sosiology | Geography | History | Antropologi | 
+185,Zahra Fauzia Khadisya,History | 
+186,Nayla Shabira Alisha,Economy | Geography | 
+187,Sabrina Qolbu Rahmana,Economy | Sosiology | History | 
+188,Mahila Shabira Rahmana,Economy | Sosiology | 
+189,Hanif Arkananta Thalib,Geography | History | 
+190,Zahra Nisya Khadisya,Sosiology | Geography | History | 
+191,Calila Annisa Khadisya,Sosiology | History | Antropologi | 
+192,Sabrina Putri Salsabila,Sosiology | Geography | Antropologi | 
+193,Hakim Fajrul Basalamah,Economy | Sosiology | 
+194,Mahila Maheswari Syifa,Economy | Sosiology | Geography | Antropologi | 
+195,Sabrina Nisya Humaira,Economy | Sosiology | Geography | 
+196,Mahila Putri Syakira,Sosiology | Geography | Antropologi | 
+197,Calila Nisya Syifa,Economy | Sosiology | Geography | History | Antropologi | 
+198,Nayla Qolbu Rahmana,Geography | Antropologi | 
+199,Hikam Arshaka Basalamah,Economy | Sosiology | Antropologi | 
+200,Mahila Nisya Khadisya,Economy | Sosiology | Geography | History | Antropologi | 
